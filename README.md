@@ -1,4 +1,3 @@
-# Nunzio_De_Cicco_Deposito_Corso_Python
 # Intensive Training Course in Python and Machine Learning
 
 ## Introduction
