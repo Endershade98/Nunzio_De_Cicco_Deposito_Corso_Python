@@ -1,6 +1,9 @@
-# def create_account():
-# def log_in():
-# def log_out():
+def create_account(name: str) -> list:
+    """return an account using a list"""
+    pass
+
+def login(password: str) -> bool:
+    """"""
 
 def sign_in() ->list:
     """return an account """
@@ -28,9 +31,9 @@ def sign_in() ->list:
             print(registred_account)
 
 
-def has_a_secret(_password: str) -> bool:
+def has_a_secret(password: str) -> bool:
     """returns True if you have a secret password, False otherwise"""
-    if _password == "GHIBLI":
+    if password == "GHIBLI":
         return True
     else:
         return False
