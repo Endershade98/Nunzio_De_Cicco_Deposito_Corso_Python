@@ -30,7 +30,6 @@ This intensive course provided me with a solid foundation in Python and Machine 
    - **NumPy**: Array manipulation and mathematical operations.
    - **Pandas**: Data management with DataFrames, data analysis, and cleaning.
    - **Matplotlib / Seaborn**: Data visualization and creating plots.
-   - **Flask**: Introduction to lightweight web application development with Python.
 
 4. **Testing and Debugging**:
    - Using tools for debugging and testing code.
