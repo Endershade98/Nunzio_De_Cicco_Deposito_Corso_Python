@@ -67,11 +67,6 @@ This intensive course provided me with a solid foundation in Python and Machine 
 
 ## Course Structure
 
-- **Duration**: 3 months (intensive).
-- **Mode**: Practical and theoretical training.
-- **Practical Projects**: Each module is accompanied by hands-on exercises to apply the learned concepts.
-- **Final Exam**: Completion of a Machine Learning project using Python.
-
 ## Conclusion
 
 This course has equipped me with the fundamental skills required to start a career as a **Junior Software Developer** with a specialization in **Python** and **Machine Learning**. I have gained a strong understanding of core concepts, programming techniques, and Machine Learning methodologies, which are ready to be applied to real-world projects.
@@ -82,6 +77,6 @@ This course has equipped me with the fundamental skills required to start a care
 
 If you'd like to learn more about my projects or discuss collaboration opportunities, feel free to contact me:
 
-- **LinkedIn**: [Your LinkedIn profile]
-- **Email**: [Your email]
+- **LinkedIn**: www.linkedin.com/in/nunzio-de-cicco
+- **Email**: decicconunzio@gmail.com
 
