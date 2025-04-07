@@ -1,0 +1,6 @@
+# ignore the __init__.py file
+*__init__.py
+# ignore the pycache folder 
+*__pycache__
+# ignore the .vscode folder
+.vscode
