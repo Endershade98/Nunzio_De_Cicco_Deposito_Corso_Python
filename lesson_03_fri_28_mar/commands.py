@@ -1,3 +1,6 @@
+# what is match case in python? How does it works
+# you can use it whenever you wanna write a menu
+
 command = input("Enter a command: ")
 
 match command:

@@ -1,4 +1,4 @@
-from main import myDB, myCursor
+from lesson_12_thu_10_apr.exercise0 import myDB, myCursor
 
 # create student database
 myCursor.execute("CREATE DATABASE ")

@@ -6,3 +6,5 @@
 .vscode
 # ignore the .venv folder
 .venv
+#ignore scripts folder
+scripts
