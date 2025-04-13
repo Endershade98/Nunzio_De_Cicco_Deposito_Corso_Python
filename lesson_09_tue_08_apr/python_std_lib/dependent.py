@@ -10,7 +10,7 @@ def range_number():
         min = int(input("Enter a minimum number: "))
         max = int(input("Enter a maximum number: "))
         if max > min:
-            numbers = [rd.sample(range(min, max)), ]
+            numbers = [rd.sample(range(min, max)), 5]
 
 
 def number_string(list):
@@ -34,4 +34,10 @@ def guess_number(numb1, numb2):
         print("You gave up")
     
     
-
+"""   
+def pseudo_class(): # It's a closure
+    x: int= 0
+    def attributes():
+        return x
+    return attributes
+"""

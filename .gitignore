@@ -4,3 +4,5 @@
 *__pycache__
 # ignore the .vscode folder
 .vscode
+# ignore the .venv folder
+.venv

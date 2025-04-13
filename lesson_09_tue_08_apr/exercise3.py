@@ -8,7 +8,7 @@ def caesar_cipher(word: str, shift: int) -> str:
                 position[i] += shift
             
             
-def decode(word, -shift):
+#def decode(word, -shift):
     pass
 
 def menu():
