@@ -1,3 +1,4 @@
+# using if-elif-else create a pseudo account using a list or nested lists
 
 condition = input("Do you want to create a new account (True/False): ")
 

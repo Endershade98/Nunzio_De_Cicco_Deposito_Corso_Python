@@ -1,3 +1,5 @@
+# How do list's methods work?
+
 numeri = [1, 2, 3, 4, 5]
 nomi = ["Alice", "Bob", "Charlie"]
 misto = [1, "due", True, 4.5]

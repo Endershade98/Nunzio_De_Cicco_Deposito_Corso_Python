@@ -15,9 +15,9 @@ b = int(input("Enter the first number b: "))
 # menu using match-case
 match operation:
     case 1:
-        print(f"{a} + {b} =",a+b)
+        print(f"{a} + {b} =",a+b) 
     case 2:
-        print(f"{a} - {b} =",a-b)
+        print(f"{a} - {b} =",a-b) 
     case 3:
         print(f"{a} * {b} =",a*b)
     case 4:

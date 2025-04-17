@@ -1,3 +1,5 @@
+# try to use the for loop to print a set of numbers
+
 number = int(input("Enter an integer number: "))
 
 if number < 0: # exceptation handling
