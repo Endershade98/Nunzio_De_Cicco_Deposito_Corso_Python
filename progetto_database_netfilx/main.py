@@ -1,64 +1,69 @@
-from analizer import StatisticalAnalyzer
+from progetto_database_netfilx.statistical_analysis import StatisticalAnalyzer
 
-
-def menu():
-    """Funzione che mostra un menu interattivo per eseguire analisi statistiche
-       sui dati inseriti dall'utente.
-    """
-    # Richiede all'utente di inserire una lista di numeri separati da virgola
-    data = input("Inserisci una lista di numeri separati da virgola (es: 1,2,3,4):\n")
+# Funzione per mostrare il menu e ottenere la scelta dell'utente
+def mostra_menu():
+    print("\nSeleziona una statistica da calcolare:")
+    print("1. Media")
+    print("2. Mediana")
+    print("3. Deviazione Standard")
+    print("4. Varianza")
+    print("5. Minimo")
+    print("6. Massimo")
     
-    try:
-        # Converte la stringa in una lista di numeri float (rimuovendo gli spazi extra)
-        data_list = [float(x.strip()) for x in data.split(",")]
-    except ValueError:
-        # Se l'utente inserisce valori non numerici, viene sollevato un errore
-        print("Errore: assicurati di inserire solo numeri.")
-        return  # Interrompe l'esecuzione della funzione nel caso di errore
+    scelta_statistica = int(input("Inserisci il numero della statistica che vuoi calcolare: "))
+    
+    print("\nSeleziona l'asse su cui calcolare (0 = Colonne, 1 = Righe):")
+    axis = int(input("Inserisci l'asse (0 per colonne, 1 per righe): "))
+    
+    return scelta_statistica, axis
 
-    # Crea un oggetto della classe StatisticalAnalyzer con i dati forniti dall'utente
-    analyzer = StatisticalAnalyzer(data_list)
+# Funzione per calcolare la statistica selezionata
+def calcola_statistica(sceltastatistica, axis):
+    # Dati di esempio (array 2D)
+    data = [
+        [25, 45000],
+        [30, 50000],
+        [22, 40000],
+        [35, 55000],
+        [28, 47000]
+    ]
+    
+    analisi = StatisticalAnalyzer(data)
+    
+    if sceltastatistica == 1:
+        result = analisi.mean(axis)
+        stat_name = "Media"
+    elif sceltastatistica == 2:
+        result = analisi.median(axis)
+        stat_name = "Mediana"
+    elif sceltastatistica == 3:
+        result = analisi.std_dev(axis)
+        stat_name = "Deviazione Standard"
+    elif sceltastatistica == 4:
+        result = analisi.variance(axis)
+        stat_name = "Varianza"
+    elif sceltastatistica == 5:
+        result = analisi.min_value(axis)
+        stat_name = "Minimo"
+    elif sceltastatistica == 6:
+        result = analisi.max_value(axis)
+        stat_name = "Massimo"
+    else:
+        print("Scelta non valida!")
+        return
+    
+    print(f"\n{stat_name} su asse {axis}:\n{result}")
 
-    # Definisce le opzioni del menu, associando ogni numero a una funzione specifica
-    options = {
-        "1": ("Media", analyzer.mean),
-        "2": ("Mediana", analyzer.median),
-        "3": ("Moda", analyzer.mode),
-        "4": ("Varianza", analyzer.variance),
-        "5": ("Deviazione Standard", analyzer.standard_deviation),
-        "6": ("Minimo", analyzer.min),
-        "7": ("Massimo", analyzer.max),
-        "8": ("Riassunto", analyzer.summary),
-        "9": ("Esci", None)  # Opzione per uscire dal programma
-    }
+# Funzione principale che esegue tutto il processo
+def main():
+    print("Benvenuto nell'analizzatore statistico!")
+    
+    # Mostra il menu e ottieni le scelte
+    scelta_statistica, axis = mostra_menu()
+    
+    # Calcola la statistica e mostra il risultato
+    calcola_statistica(scelta_statistica, axis)
 
-    # Ciclo per mostrare il menu finché l'utente non sceglie di uscire
-    while True:
-        print("\n--- Menu Analisi Statistica ---")
-        # Mostra tutte le opzioni disponibili nel menu
-        for key, (desc, _) in options.items():
-            print(f"{key}. {desc}")
-        
-        # Richiede all'utente di scegliere un'opzione
-        choice = input("Seleziona un'opzione: ")
-
-        if choice == "9":
-            # Se l'utente sceglie "9", esce dal programma
-            print("Uscita dal programma.")
-            break  # Interrompe il ciclo e chiude il programma
-        elif choice in options:
-            # Se l'utente seleziona una delle opzioni valide
-            try:
-                # Esegue la funzione associata all'opzione scelta
-                result = options[choice][1]()
-                print(f"\nRisultato di '{options[choice][0]}':\n{result}")
-            except Exception as e:
-                # Gestisce eventuali errori durante l'esecuzione della funzione
-                print(f"Errore durante l'esecuzione: {e}")
-        else:
-            # Se l'utente inserisce un'opzione non valida
-            print("Opzione non valida, riprova.")  # Richiesta di input valido
-
-# Se il file viene eseguito direttamente (non importato), avvia il menu
+# entry point per il codice
 if __name__ == "__main__":
-    menu()
+    main()
