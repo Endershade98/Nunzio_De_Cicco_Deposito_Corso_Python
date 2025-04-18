@@ -42,6 +42,7 @@ def leggi_file_e_dividi(nome_file, divisore):
     finally:
         # Viene sempre eseguito, sia che l’operazione abbia avuto successo, sia che ci sia stato un errore
         print("Fine della funzione leggi_file_e_dividi.")
+        
 
 # --- Esempio di utilizzo ---
 if __name__ == "__main__":
@@ -56,3 +57,48 @@ if __name__ == "__main__":
 
     # Caso 4: tentativo di divisione per zero
     leggi_file_e_dividi("dati.txt", 0)
+    
+
+# Esempio con la classe    
+class EccezioniTester:
+    def solleva(self, tipo):
+        if tipo == "ValueError":
+            raise ValueError("Valore non valido")
+        elif tipo == "TypeError":
+            raise TypeError("Tipo non valido")
+        elif tipo == "IndexError":
+            raise IndexError("Indice fuori range")
+        elif tipo == "KeyError":
+            raise KeyError("Chiave non trovata")
+        elif tipo == "ZeroDivisionError":
+            raise ZeroDivisionError("Divisione per zero")
+        elif tipo == "AttributeError":
+            raise AttributeError("Attributo non trovato")
+        elif tipo == "ImportError":
+            raise ImportError("Errore di importazione")
+        elif tipo == "FileNotFoundError":
+            raise FileNotFoundError("File non trovato")
+        elif tipo == "PermissionError":
+            raise PermissionError("Permesso negato")
+        elif tipo == "RuntimeError":
+            raise RuntimeError("Errore di esecuzione")
+        elif tipo == "StopIteration":
+            raise StopIteration("Iterazione terminata")
+        elif tipo == "AssertionError":
+            raise AssertionError("Asserzione fallita")
+        elif tipo == "OSError":
+            raise OSError("Errore di sistema operativo")
+        elif tipo == "MemoryError":
+            raise MemoryError("Memoria esaurita")
+        elif tipo == "NotImplementedError":
+            raise NotImplementedError("Funzionalità non implementata")
+        else:
+            raise ValueError(f"Tipo di eccezione '{tipo}' non supportato.")
+
+# Esempio d’uso
+tester = EccezioniTester()
+
+try:
+    tester.solleva("ZeroDivisionError")
+except Exception as e:
+    print(f"Catturata eccezione: {type(e).__name__} - {e}")

@@ -1,0 +1,36 @@
+Le regole fondamentali dell'OOP sono l'Ereditarietà, il Polimorfismo, l'Incapsulamento, e l'Astrazione. 
+L'Astrazione fa da principio alla base dei primi tre e consiste nella capacità di avere delle interfaccie comuni di sistemi
+costituiti da più componenti. Il polimorfismo è la capacità di un oggetto di implementare comportamenti diversi a seconda di
+contesti d'uso diversi e di mantenere inalterata la sua interfaccia, un esempio di cio sono i simboli delle operazioni aritmetiche
+che pur restando uguali, operano in modi diversi a seconda degli oggetti con i quali interagiscono. L'Incapsulamento è la capacità
+di nascondere l'accesso a parti di condice da parte del resto del codice, viene implementato principalmente grazie alle classi,
+che incapsulano attributi e metodi (solo grazie ai metodi è possibile accedere agli attributi di un oggetto). L'Ereditarietà
+è la capacità di una classe Figlia di ereditare attributi e metodi dalla classe Genitore.
+
+
+
+L'Astrazione è il principio fondamentale dell'OOP ed è alla base dei primi tre (Poimorfismo, Ereditarietà ed Incapsulamento) e consiste nella capacità di avere delle interfaccie comuni di sistemi costituiti da più componenti. L'Astrazione è il principio per il quale è possibile orchestrare delle interfaccie per poter utilizzare tutti gli altri principi senza 
+tenee conto di tutti i sotto-sistemi che ne permettono il funzionamento (un esempio è la funzione print che è solo utilizzata dall'utente 
+non scritta ex novo).
+
+
+
+Un DB relazionale è un database costituito tabelle, le quali sono a loro volta costituite da righe (chiamate anche records)
+e colonne. Le tabelle sono identificate in modo univoco dalle primary key con le quali è possibile stabilire delle relazioni
+da qui il nome 'relazionale' costruendo un vero e proprio schema relazionale tra tabelle. E` possibile utilizzare python per
+stabilire un collegamento ad un DB utilizzando la libreria mysql.connector, tramite la quale è ossibile configurare una connessiona
+ad un DB già esistente e muovendo un corsore (cursor) è possibile eseguire (execute) le query, che andranno poi committate (commit).
+
+
+
+Il 'Join' è un comando che ci permette di confrontare i records delle tabelle e di selezionarle in base al fatto che verifichino
+o meno alcuni vincoli. Esistono quattro operazioni diverse di 'Join' simili alle operazioni cartesiane tra insiemi: INNER seleziona
+i records in comune tra due tabelle, FULL OUTER seleziona l'unione di tutti gli elementi delle tabelle, LEFT Join e RIGHT join 
+selezionano i records di una tabella più quelli che ha in comune con la tabella con la quale la stiamo confrontando.
+
+
+
+NumPy è una libreria esterna di python utilizzata in ambito scientifico e data analitico per eseguire operazioni tra array ottimizzati.
+Infatti a differenza delle classiche liste di python, gli array di NumPy sono vettori sui quali è possibile eseguire operazioni elemento
+per elemento senza accedere ad ogni elemento (evitando i cicli for come nelle liste). NumPy è principalmente utilizzata per l'analisi dei
+dati che sono rappresentabili come array.
