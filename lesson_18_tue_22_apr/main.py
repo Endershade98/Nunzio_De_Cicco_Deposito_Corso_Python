@@ -6,5 +6,5 @@ file_path = '/home/endershade/Desktop/Python_Course_Repo/lesson_18_tue_22_apr/ve
 # Caricamento dei dati nel DataFrame
 df = pd.read_csv(file_path)
 
-#le prime righe del DataFrame per confermare
+#le prime righe (default 5 rows) del DataFrame per confermare
 print(df.head())
