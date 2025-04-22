@@ -1,6 +1,7 @@
 import numpy as np
 
 
+
 class StatisticalAnalyzer:
     
     def __init__(self, data):
