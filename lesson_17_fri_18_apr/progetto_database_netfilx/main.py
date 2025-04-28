@@ -1,5 +1,5 @@
 import numpy as np
-from statistical_analysis import StatisticalAnalyzer
+from progetto_musica.statistical_analysis import StatisticalAnalyzer
 from msql_test_db import crea_tabelle_studenti, estrai_dati_numerici
 
 
