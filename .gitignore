@@ -3,8 +3,8 @@
 # ignore the pycache folder 
 *__pycache__
 # ignore the .vscode folder
-.vscode
+*.vscode
 # ignore the .venv folder
-.venv
+*.venv
 #ignore scripts folder
-.scripts
+*.scripts
